@@ -6,6 +6,15 @@ android {
     namespace = "space.jtcao.wc26"
     compileSdk = 34
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("../android.keystore")
+            storePassword = "wc26app123"
+            keyAlias = "wc26"
+            keyPassword = "wc26app123"
+        }
+    }
+
     defaultConfig {
         applicationId = "space.jtcao.wc26"
         minSdk = 24
@@ -21,12 +30,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.create("release") {
-                storeFile = file("../android.keystore")
-                storePassword = "wc26app123"
-                keyAlias = "wc26"
-                keyPassword = "wc26app123"
-            }
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 }
