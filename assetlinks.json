@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "space.jtcao.wc26",
+      "sha256_cert_fingerprints": [
+        "B8:83:5A:B8:E6:35:E0:CC:15:EA:E3:6B:33:04:1F:55:1B:74:22:B9:9B:4A:85:83:2A:B5:6B:EC:5A:21:81:14"
+      ]
+    }
+  }
+]
